@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm: Battle Royale</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="control-panel">
+            <button class="control-btn" onclick="generateArray()">Generate Array</button>
+            <button class="control-btn" onclick="startSorting()">Start Sorting</button>
+            <input type="range" min="1" max="3000" value="200" id="tickSpeed" onchange="updateSpeed()">
+            <label for="speedRange">Tick Speed: <span id="speedValue">200 </span></label>
+            <input type="text" min="1" max="50" value="25" id="arraySize">
+            <button class="control-btn" onclick="updateArraySize()">Update Grid Size</button>
+        </div>
+        <div id="visualizer">
+            <div class="sort-container" id="bubbleSort">
+                <h2>Bubble Sort</h2>
+                <div class="bar-container"></div>
+                <div class="timer"></div>
+            </div>
+            <div class="sort-container" id="selectionSort">
+                <h2>Selection Sort</h2>
+                <div class="bar-container"></div>
+                <div class="timer"></div>
+            </div>
+            <div class="sort-container" id="radixSort">
+                <h2>Radix Sort</h2>
+                <div class="bar-container"></div>
+                <div class="timer"></div>
+            </div>
+            <div class="sort-container" id="heapSort">
+                <h2>Heap Sort</h2>
+                <div class="bar-container"></div>
+                <div class="timer"></div>
+            </div>            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
